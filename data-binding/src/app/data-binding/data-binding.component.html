@@ -18,7 +18,7 @@
 </section>
 --->
 
-<article>
+<!-- <article>
   <h3>  Class e Style Binding</h3>
   <div>
     Selecione uma classe:
@@ -47,4 +47,33 @@
       Esse texto somente aparece em um caso de erro
     </div>
 </div>
-</article>
+</article> -->
+
+<section>
+  <article>
+    <h3>Event binding</h3>
+    <div>
+      <button class="btn btn-primary" (click)="botaoClicado()">Me clique</button>
+
+      <br><br>
+
+      <input type="text"
+      (keyup)="onKeyUp($event)"
+      (keyup.enter)="salvarValor($event.target.value)"
+      (blur)="salvarValor=($event.target.value)"
+      #campoInput
+      >
+      <p>Valor atual: {{ valorAtual }}</p>
+      <p>Valor salvo: {{ valorSalvo}}</p>
+
+      <br>
+      <span
+        (mouseover)="onMouseOverOut()"
+        (mouseout)="onMouseOverOut()"
+        [class.highlight]="isMouseOver"
+        >
+        Passe o mouse aqui
+      </span>
+    </div>
+  </article>
+</section>
