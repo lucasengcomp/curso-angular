@@ -7,12 +7,14 @@ import { DataBindingComponent } from './data-binding/data-binding.component';
 import { FormsModule } from '@angular/forms';
 import { MeuFormModule } from './meu-form/meu-form.module';
 import { InputPropertieComponent } from './input-propertie/input-propertie.component';
+import { OutputPropertyComponent } from './output-property/output-property.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DataBindingComponent,
-    InputPropertieComponent
+    InputPropertieComponent,
+    OutputPropertyComponent
   ],
   imports: [
     BrowserModule,
